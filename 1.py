@@ -4,10 +4,10 @@ n, d, r = map(int, input('Ввведите количество колец, то
 def lengh(a, b, c):
     one = 2 * b + 2 * c
     if a % 2 == 0:
-        whole = one * n - (2 * b) * ((a / 2) - 1)
+        result = one * (((a - 1) // 2) + 1) + (c - 2) * 2 * ((a - 1) // 2) + (one - 4)
     else:
-        whole = one * n - (2 * b) * ((a // 2) + 1)
-    return whole
+        result = one * ((a // 2) + 1) + (c - 2) * 2 * (a // 2)
+    return result
 
 
 print(lengh(n, d, r))
